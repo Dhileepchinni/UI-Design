@@ -1,0 +1,188 @@
+@import 'config';
+@import 'utilities';
+@import 'form';
+@import 'mobile';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Raleway', 'sans-serif';
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  margin-left: 7px;
+}
+ul {
+  margin-left: 7px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  border-bottom: solid 2px black;
+  opacity: 1;
+  ul {
+    display: flex;
+  }
+  // border-top: solid;
+  a {
+    text-decoration: none;
+    color: $danger-color;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+//landing
+.landing {
+  height: 100vh;
+  position: relative;
+  background: url('https://images.indianexpress.com/2019/11/Soorari-Pottru-759.jpg');
+  &-inner {
+    color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+//profile page
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+  align-items: center;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    text-decoration: none;
+    color: $danger-color;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+    &:hover {
+      color: white;
+    }
+  }
+}
+//profile grid
+.profile-grid {
+  display: grid;
+  grid-template-areas: 'top top' 'about about' 'edu exp' 'github github';
+  grid-gap: 1rem;
+}
+.profile-top {
+  grid-area: top;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  img {
+    width: 250px;
+  }
+  .icons a {
+    color: #ffffff;
+    margin: 0, 0.3rem;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.profile-about {
+  grid-area: about;
+  text-align: center;
+  .skills {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.profile-exp {
+  grid-area: exp;
+}
+
+.profile-edu {
+  grid-area: edu;
+}
+.profile-edu,
+.profile-exp {
+  & > div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: #ccc 1px dotted;
+  }
+  &:last-child {
+    border: none;
+  }
+  p {
+    padding: 0.5rem 0;
+  }
+}
+.profile-github {
+  grid-area: github;
+  .repo {
+    display: flex;
+    //justify-content: space-between;
+
+    & > div:first-child {
+      flex: 7;
+      flex-basis: 70%;
+    }
+    & > div:last-child {
+      flex: 3;
+      flex-basis: 20%;
+    }
+    a {
+      text-decoration: none;
+      color: $danger-color;
+      padding: 0.45rem;
+      margin: 0 0rem;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+.form-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+span {
+  font-family: Arial, Helvetica, sans-serif;
+}
